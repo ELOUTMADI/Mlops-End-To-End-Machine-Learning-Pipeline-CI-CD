@@ -4,12 +4,19 @@ The main objective of this project is to automate the whole machine learning app
 Here the objective is to build the model with Tensorflow and automate the deployment process ( look CI/CD steps ).
 
 1.Unstructured data
+
 2.Explore the dataset.
+
 3.Prepare the data.
+
 4.Data Augmentation 
+
 5.CNN classifier
+
 6.Multiclass classification -softmax
+
 7.loss-categorical_crossentropy
+
 8.Optimizer -Adam
 
 
