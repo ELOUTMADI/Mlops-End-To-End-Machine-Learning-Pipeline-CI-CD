@@ -1,6 +1,6 @@
 The main objective of this project is to automate the whole machine learning app deployment process. To implement this project we will be using TensorFlow and basic knowledge in dockers and Kubernetes , cloudbuild (GCP)
 
-#Model Deployment and CICD Steps
+##Model Deployment and CICD Steps
 
 What is CICD?
 
