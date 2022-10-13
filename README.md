@@ -1,1 +1,1 @@
-The main objective of this project is to automate the whole machine learning app deployment process. To implement this project the person needs some understanding of TensorFlow and basic knowledge in dockers and Kubernetes. If you want to know more about Docker, Kubernetes, and cloudbuild then refer to the links I have given.
+The main objective of this project is to automate the whole machine learning app deployment process. To implement this project we will be using TensorFlow and basic knowledge in dockers and Kubernetes , cloudbuild (GCP )
