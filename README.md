@@ -23,6 +23,9 @@ Continuous Integration (CI) and Continuous Delivery (CD) enables teams to adopt 
 We will be doing the following steps:
 
 1.Github ready: Create all the files needed for the automation and keep the GitHub repository ready.
+
 2.Cloudbuild: The build will be done by using google cloudbuild.
+
 3.Testing: No automated testing in this pipeline.
+
 4.Deploy: We will be deploying it in GKE with 2 replicas.
