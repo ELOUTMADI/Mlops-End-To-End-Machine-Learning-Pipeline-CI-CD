@@ -51,3 +51,22 @@ This code uses the following libraries:
 - The `decode_img` function takes in the image content and preprocesses it for classification by decoding the JPEG, resizing it to 150x150 pixels, and adding an extra dimension.
 - The `model.predict` function is used to classify the image and the `np.argmax` function is used to get the index of the predicted class.
 - The `classes` list stores the names of the categories and the index of the predicted class is used to get the corresponding name from the list.
+
+## Dockerfile for Streamlit App
+
+This Dockerfile builds an image for a Streamlit app. It uses the official `python:3.7-slim` image as the base image and installs the necessary dependencies and libraries.
+
+## Steps
+
+1. Update the package list using `apt-get update`.
+2. Set the environment variable `APP_HOME` to `/app` and set the working directory to `$APP_HOME`.
+3. Copy the files from the current directory to the working directory.
+4. List the files in the working directory.
+5. Install the libraries in `requirements.txt` using `pip`.
+6. Run the Streamlit app using the `streamlit` command.
+
+## Additional Information
+
+- The `CMD` command specifies the default command to run when the container is started from the image. In this case, it runs the Streamlit app using the `streamlit run` command.
+- The `--server.enableCORS false` flag disables Cross-Origin Resource Sharing (CORS) in the Streamlit server.
+- The `myapp.py` argument specifies the name of the Python file containing the Streamlit app.
