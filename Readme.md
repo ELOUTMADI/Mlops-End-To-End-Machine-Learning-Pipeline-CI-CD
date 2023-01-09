@@ -70,3 +70,19 @@ This Dockerfile builds an image for a Streamlit app. It uses the official `pytho
 - The `CMD` command specifies the default command to run when the container is started from the image. In this case, it runs the Streamlit app using the `streamlit run` command.
 - The `--server.enableCORS false` flag disables Cross-Origin Resource Sharing (CORS) in the Streamlit server.
 - The `myapp.py` argument specifies the name of the Python file containing the Streamlit app.
+
+## Cloud Build Configuration File
+
+This is a configuration file for Cloud Build in the Google Cloud Platform (GCP). It specifies a series of steps to build and deploy a Docker container to Google Kubernetes Engine (GKE).
+
+## Steps
+
+1. Build the Docker container using the `gcr.io/cloud-builders/docker` builder and the `build` command. The container is built from the current directory (`.`) and is tagged with `gcr.io/$PROJECT_ID/myproject:latest`.
+2. Push the built Docker container to the container registry using the `gcr.io/cloud-builders/docker` builder and the `push` command.
+3. Run the `gcr.io/cloud-builders/gcloud` builder and run a bash script to print some information about the built container.
+4. Deploy the container to GKE using the `gcr.io/cloud-builders/gke-deploy` builder and the `run` command. The `K8s/` directory and the `us-west1-b` location are specified as arguments. The `mykube` cluster is also specified.
+
+## Additional Information
+
+- The `options` section specifies the logging options for Cloud Build. In this case, it is set to `CLOUD_LOGGING_ONLY`, which means that logs will only be stored in Cloud Logging.
+
